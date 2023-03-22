@@ -9,3 +9,4 @@ The purpose of this project is to practice the fundamentals of React. That being
 - Splitting up code into more components
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is not mobile responsive. Only made for big screens.
