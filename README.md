@@ -4,6 +4,7 @@ A React app which allows users to create their own resume using a ready template
 
 The purpose of this project is to practice the fundamentals of React. That being: 
 - The use of state and props
+- Using functional components
 - Conditional rendering
 - The use of hooks
 - Splitting up code into more components
