@@ -31,7 +31,11 @@ export default function Cv(props) {
           {studies}
         </div>
         <div className="cv--right">
-          <img className="cv--pic" src={profilePic} alt="profile" />
+          <img
+            className="cv--pic"
+            src={props.data.photo === "" ? profilePic : props.data.photo}
+            alt="profile"
+          />
           <p className="cv--head">Personal Details</p>
           <div className="cv--persDet">
             <p className="cv--rightSubtitle">Address</p>

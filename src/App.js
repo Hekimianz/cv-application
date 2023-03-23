@@ -14,16 +14,24 @@ export default function App() {
   });
   const [experience, setExperience] = React.useState([]);
   const [study, setStudy] = React.useState([]);
+  let loadFile = function (event) {
+    return URL.createObjectURL(event.target.files[0]);
+  };
 
   function changeData(e, dataName) {
     setData((prevData) => {
-      return {
-        ...data,
-        [dataName]: e.target.value,
-      };
+      return dataName === "photo"
+        ? {
+            ...data,
+            photo: loadFile(e),
+          }
+        : {
+            ...data,
+            [dataName]: e.target.value,
+          };
     });
   }
-
+  console.log(data.photo);
   function addExp() {
     setExperience((prevData) => {
       return prevData.concat({
