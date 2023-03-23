@@ -15,9 +15,11 @@ export default function Cv(props) {
       </div>
       <div className="cv--bot">
         <div className="cv--left">
-          <p className="cv--leftSubtitle">Bio</p>
+          {props.data.bio.length > 0 && <p className="cv--leftSubtitle">Bio</p>}
           <p className="cv--item">{props.data.bio}</p>
-          <p className="cv--leftSubtitle">Experience</p>
+          {props.exp.length >= 1 && (
+            <p className="cv--leftSubtitle">Experience</p>
+          )}
           {experiences}
         </div>
         <div className="cv--right">

@@ -12,16 +12,7 @@ export default function App() {
     email: "",
     bio: "",
   });
-  const [experience, setExperience] = React.useState([
-    {
-      id: nanoid(),
-      position: "",
-      company: "",
-      location: "",
-      from: "",
-      to: "",
-    },
-  ]);
+  const [experience, setExperience] = React.useState([]);
 
   function changeData(e, dataName) {
     setData((prevData) => {
