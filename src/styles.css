@@ -2,11 +2,11 @@
   margin: 0;
 }
 
-body,
+html body,
 html,
 #root {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 header {
@@ -24,7 +24,6 @@ header {
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding-bottom: 20px;
 }
 
 .components--cont {

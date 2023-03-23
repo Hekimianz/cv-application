@@ -1,0 +1,19 @@
+.exp--item {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.exp--subtitle-2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.exp--hr {
+  width: 65%;
+  margin: 20px auto;
+  height: 0;
+  border: 0.5px solid rgb(127, 127, 127);
+}
+
+.exp--cont:last-child > hr {
+  display: none;
+}

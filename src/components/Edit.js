@@ -1,9 +1,63 @@
 import React from "react";
 import "./styles/Edit.css";
+import { nanoid } from "nanoid";
 export default function Edit(props) {
+  const experience = props.exp.map((item) => {
+    return (
+      <div key={() => nanoid()}>
+        <div className="edit--item">
+          <span>Position</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleExp(e, "position")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>Company</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleExp(e, "company")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>Location</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleExp(e, "location")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>From</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleExp(e, "from")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>To</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleExp(e, "to")}
+          />
+        </div>
+        {props.exp.length > 1 && <hr className="edit--hr"></hr>}
+      </div>
+    );
+  });
+
   return (
     <div className="edit--cont">
-      <h1>Personal Information</h1>
+      <h2 className="edit--head">Personal Information</h2>
       <div className="edit--item">
         <span>Full Name</span>
         <input
@@ -67,6 +121,16 @@ export default function Edit(props) {
           id="bio--input"
         ></textarea>
       </div>
+      <div className="edit-exp--cont">
+        <h2 className="edit--head">Experience</h2>
+        {experience}
+      </div>
+      <button onClick={props.btnHandlerAdd} className="edit--add-xp-btn">
+        Add Exp
+      </button>
+      <button onClick={props.btnHandlerDel} className="edit--del-xp-btn">
+        Del Exp
+      </button>
     </div>
   );
 }

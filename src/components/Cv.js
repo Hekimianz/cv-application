@@ -1,7 +1,12 @@
 import React from "react";
 import "./styles/Cv.css";
 import profilePic from "../profilePic.jpg";
+import Experience from "../components/Experience.js";
+import { nanoid } from "nanoid";
 export default function Cv(props) {
+  const experiences = props.exp.map((item) => (
+    <Experience key={nanoid()} exp={item} totalExp={props.exp} />
+  ));
   return (
     <div className="cv--cont">
       <div className="cv--top">
@@ -12,6 +17,8 @@ export default function Cv(props) {
         <div className="cv--left">
           <p className="cv--leftSubtitle">Bio</p>
           <p className="cv--item">{props.data.bio}</p>
+          <p className="cv--leftSubtitle">Experience</p>
+          {experiences}
         </div>
         <div className="cv--right">
           <img className="cv--pic" src={profilePic} alt="profile" />
