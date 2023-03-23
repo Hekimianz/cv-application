@@ -1,0 +1,100 @@
+.cv--cont {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.cv--top {
+  height: 12%;
+  width: 100%;
+  background-color: rgb(2, 2, 59);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cv--bot {
+  height: 88%;
+  width: 100%;
+  display: flex;
+}
+
+.cv--left {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 60%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.cv--right {
+  height: 100%;
+  width: 40%;
+  border-bottom-right-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv--name {
+  font-size: 2em;
+  margin-left: 20px;
+}
+
+.cv--title {
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.cv--pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+#bio--input {
+  height: 90px;
+  resize: none;
+}
+
+.cv--persDet {
+  width: 100%;
+}
+
+.cv--head {
+  font-size: 1.5em;
+  text-decoration: underline;
+  color: rgb(2, 2, 59);
+  font-weight: bold;
+}
+
+.cv--rightSubtitle,
+.cv--leftSubtitle {
+  font-size: 20px;
+  color: rgb(5, 5, 74);
+  margin-left: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.right--item {
+  margin-left: 10px;
+}
+.cv--leftSubtitle {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.cv--item {
+  margin-left: 20px;
+}
