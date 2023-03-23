@@ -13,6 +13,7 @@ export default function App() {
     bio: "",
   });
   const [experience, setExperience] = React.useState([]);
+  const [study, setStudy] = React.useState([]);
 
   function changeData(e, dataName) {
     setData((prevData) => {
@@ -36,6 +37,24 @@ export default function App() {
     });
   }
 
+  function addStudy() {
+    setStudy((prevStudy) => {
+      return prevStudy.concat({
+        id: nanoid(),
+        school: "",
+        title: "",
+        from: "",
+        to: "",
+      });
+    });
+  }
+
+  function delStudy() {
+    setStudy((prevData) => {
+      return prevData.slice(0, -1);
+    });
+  }
+
   function delExp() {
     setExperience((prevData) => {
       return prevData.slice(0, -1);
@@ -56,7 +75,22 @@ export default function App() {
             };
       });
     });
-    console.log(experience);
+  }
+
+  function changeStudy(e, dataName) {
+    const id = e.target.dataset.id;
+    setStudy((prevData) => {
+      return prevData.map((obj) => {
+        return id === obj.id
+          ? {
+              ...obj,
+              [dataName]: e.target.value,
+            }
+          : {
+              ...obj,
+            };
+      });
+    });
   }
 
   return (
@@ -69,10 +103,14 @@ export default function App() {
           handleData={changeData}
           exp={experience}
           handleExp={changeExp}
-          btnHandlerAdd={addExp}
-          btnHandlerDel={delExp}
+          btnHandlerAddExp={addExp}
+          btnHandlerDelExp={delExp}
+          study={study}
+          handleStudy={changeStudy}
+          btnHandlerAddStudy={addStudy}
+          btnHandlerDelStudy={delStudy}
         />
-        <Cv data={data} exp={experience} />
+        <Cv data={data} exp={experience} study={study} />
       </div>
     </div>
   );

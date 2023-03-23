@@ -55,6 +55,50 @@ export default function Edit(props) {
     );
   });
 
+  const studies = props.study.map((item) => {
+    return (
+      <div key={() => nanoid()}>
+        <div className="edit--item">
+          <span>School Name</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleStudy(e, "school")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>Title</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleStudy(e, "title")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>From</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleStudy(e, "from")}
+          />
+        </div>
+        <div className="edit--item">
+          <span>To</span>
+          <input
+            data-id={item.id}
+            type="text"
+            className="input"
+            onChange={(e) => props.handleStudy(e, "to")}
+          />
+        </div>
+        {props.study.length > 1 && <hr className="edit--hr"></hr>}
+      </div>
+    );
+  });
+
   return (
     <div className="edit--cont">
       <h2 className="edit--head">Personal Information</h2>
@@ -125,11 +169,19 @@ export default function Edit(props) {
         <h2 className="edit--head">Experience</h2>
         {experience}
       </div>
-      <button onClick={props.btnHandlerAdd} className="edit--add-xp-btn">
+      <button onClick={props.btnHandlerAddExp} className="edit--add-xp-btn">
         Add Exp
       </button>
-      <button onClick={props.btnHandlerDel} className="edit--del-xp-btn">
+      <button onClick={props.btnHandlerDelExp} className="edit--del-xp-btn">
         Del Exp
+      </button>
+      <h2 className="edit--head">Studies</h2>
+      {studies}
+      <button onClick={props.btnHandlerAddStudy} className="edit--add-xp-btn">
+        Add Studies
+      </button>
+      <button onClick={props.btnHandlerDelStudy} className="edit--del-xp-btn">
+        Del Studies
       </button>
     </div>
   );

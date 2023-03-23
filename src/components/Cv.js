@@ -1,11 +1,15 @@
 import React from "react";
 import "./styles/Cv.css";
 import profilePic from "../profilePic.jpg";
-import Experience from "../components/Experience.js";
+import Experience from "./Experience.js";
+import Studies from "./Studies";
 import { nanoid } from "nanoid";
 export default function Cv(props) {
   const experiences = props.exp.map((item) => (
     <Experience key={nanoid()} exp={item} totalExp={props.exp} />
+  ));
+  const studies = props.study.map((item) => (
+    <Studies key={nanoid()} study={item} totalStudies={props.study} />
   ));
   return (
     <div className="cv--cont">
@@ -21,6 +25,10 @@ export default function Cv(props) {
             <p className="cv--leftSubtitle">Experience</p>
           )}
           {experiences}
+          {props.study.length >= 1 && (
+            <p className="cv--leftSubtitle">Studies</p>
+          )}
+          {studies}
         </div>
         <div className="cv--right">
           <img className="cv--pic" src={profilePic} alt="profile" />

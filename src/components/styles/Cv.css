@@ -1,6 +1,6 @@
 .cv--cont {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -9,7 +9,7 @@
 }
 
 .cv--top {
-  height: 12%;
+  height: 100px;
   width: 100%;
   background-color: rgb(2, 2, 59);
   border-top-left-radius: 7px;
@@ -21,7 +21,7 @@
   align-items: flex-start;
 }
 .cv--bot {
-  height: 88%;
+  height: 100%;
   width: 100%;
   display: flex;
 }
@@ -32,6 +32,7 @@
   width: 60%;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+  padding-bottom: 20px;
 }
 
 .cv--right {
