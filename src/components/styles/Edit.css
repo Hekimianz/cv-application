@@ -18,11 +18,12 @@
   border-radius: 4px;
   border: 1px solid #010145;
   height: 1.5em;
+  margin-top: 5px;
 }
 
 .edit--add-xp-btn,
 .edit--del-xp-btn {
-  margin: 10px 100px;
+  margin: 10px 300px;
   background-color: rgb(4, 4, 75);
   color: white;
   border: none;
@@ -33,7 +34,7 @@
 
 .edit--del-xp-btn {
   background-color: rgb(79, 3, 3);
-  margin: 5px 100px;
+  margin: 0px 300px;
 }
 .edit--head {
   color: rgb(2, 2, 59);
